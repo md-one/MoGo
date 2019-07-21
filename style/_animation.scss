@@ -1,0 +1,30 @@
+@keyframes boxShadow {
+    from {
+        box-shadow: 0px 0px #95E1D3;
+        transform: translate(0, 0);
+    }
+
+    to {
+        box-shadow: 7px 7px #95E1D3;
+        transform: translate(-7px, -7px);
+    }
+}
+@keyframes nav {
+    from {
+        color: #fff;
+    }
+
+    to {
+        color: black;
+        background: rgba(225, 225, 225, 0.2)
+    }
+}
+@keyframes navr {
+    from {
+        color: black;
+    }
+
+    to {
+        color: #fff; 
+    }
+}

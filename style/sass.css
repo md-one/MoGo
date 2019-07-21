@@ -1,3 +1,204 @@
+@keyframes boxShadow {
+  from {
+    box-shadow: 0px 0px #95E1D3;
+    transform: translate(0, 0); }
+  to {
+    box-shadow: 7px 7px #95E1D3;
+    transform: translate(-7px, -7px); } }
+@keyframes nav {
+  from {
+    color: #fff; }
+  to {
+    color: black;
+    background: rgba(225, 225, 225, 0.2); } }
+@keyframes navr {
+  from {
+    color: black; }
+  to {
+    color: #fff; } }
+* {
+  box-sizing: border-box; }
 
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; }
+
+nav {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  color: white; }
+  nav h3 {
+    grid-column: 1;
+    font-size: 40px;
+    margin: 0;
+    height: 50%;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+    nav h3:hover {
+      cursor: pointer; }
+  nav ul {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100%; }
+    nav ul a {
+      font-size: 17px;
+      margin: 20px; }
+      nav ul a:hover {
+        cursor: pointer; }
+    nav ul img {
+      height: 15px;
+      width: auto; }
+      nav ul img:hover {
+        cursor: pointer; }
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: url(images/Clip.png);
+  background-position: center;
+  background-size: cover;
+  z-index: -1; }
+  header .overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/Gradient%20Overlay.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 20%;
+    z-index: 1; }
+  header .intro {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; }
+    header .intro h3 {
+      width: 100%;
+      margin: 0;
+      font-size: 60px;
+      text-align: center;
+      font-weight: normal; }
+      header .intro h3:hover {
+        cursor: default; }
+    header .intro h2 {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      line-height: 100%;
+      font-size: 140px;
+      text-align: center;
+      font-weight: normal; }
+      header .intro h2:hover {
+        cursor: default; }
+    header .intro hr {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      margin: 30px 0; }
+    header .intro button {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(225, 225, 255, 0);
+      border: 3px solid #fff;
+      border-radius: 3px;
+      padding: 12px 40px;
+      color: white;
+      font-size: 14px;
+      margin: 75px 0; }
+      header .intro button:hover {
+        cursor: pointer; }
+
+.aboutUs {
+  width: 100%;
+  height: 75vh;
+  text-align: center; }
+  .aboutUs .con {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%); }
+    .aboutUs .con h3 {
+      font-size: 26px;
+      font-weight: normal;
+      color: #333333;
+      margin: 0; }
+    .aboutUs .con h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #333333;
+      margin-top: 5px;
+      margin-bottom: 0; }
+    .aboutUs .con hr {
+      color: #F38181;
+      width: 60px;
+      border: 2px solid #F38181;
+      border-radius: 10px;
+      margin: 25px auto; }
+    .aboutUs .con p {
+      font-size: 15px;
+      font-weight: lighter;
+      color: #999999;
+      margin: 0; }
+    .aboutUs .con div {
+      padding: 45px 0 20px; }
+      .aboutUs .con div img {
+        height: 220px;
+        width: auto;
+        margin: 10px; }
+        .aboutUs .con div img:hover {
+          animation-name: boxShadow;
+          animation-fill-mode: forwards;
+          animation-duration: 0.3s; }
+
+.facts {
+  width: 100%;
+  height: 25vh;
+  background: #95E1D3;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .facts:hover {
+    cursor: default; }
+  .facts .box {
+    height: 100%;
+    width: 12%;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; }
+    .facts .box h4 {
+      font-size: 70px;
+      margin-bottom: 0;
+      margin-top: 0;
+      font-weight: normal; }
+    .facts .box p {
+      font-size: 15px;
+      margin-bottom: 0;
+      margin-top: 0; }
 
 /*# sourceMappingURL=sass.css.map */
