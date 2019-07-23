@@ -1,22 +1,7 @@
 @import "./animation.scss";
+@import "./variables.scss";
 
-* {
-    box-sizing: border-box;
-}
-::-webkit-scrollbar {
-    width: 8px;
-    margin: 10px;
-    padding: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #2c2c2c; 
-    width: 18px;
-}
-::-webkit-scrollbar-thumb {
-    background: #95E1D3; 
-    border-radius: 10px;
-                        
-    }
+
 body {
     height: 100vh;
     width: 100%;
@@ -111,7 +96,6 @@ header {
             margin: 0;
             font-size: 60px;
             text-align: center;
-            font-weight: normal;
 
             &:hover {
                 cursor: default;
@@ -125,7 +109,6 @@ header {
             line-height: 100%;
             font-size: 140px;
             text-align: center;
-            font-weight: normal;
 
             &:hover {
                 cursor: default;
@@ -161,20 +144,21 @@ header {
     }
 }
 
-section{
-    .title{
+section {
+    text-align: center;
+    width: 100%;
+
+    .title {
+        text-align: center;
+        margin: auto;
 
         h3 {
             font-size: 26px;
-            font-weight: normal;
-            color: #333333;
             margin: 0;
         }
 
         h2 {
             font-size: 30px;
-            font-weight: normal;
-            color: #333333;
             margin-top: 5px;
             margin-bottom: 0;
         }
@@ -189,17 +173,16 @@ section{
 
         p {
             font-size: 15px;
-            font-weight: lighter;
-            color: #999999;
-            margin: 0;
+
+
+            margin: 0 auto;
+            width: 63%;
         }
     }
 }
 
 .aboutUs {
-    width: 100%;
     height: 75vh;
-    text-align: center;
 
     .con {
         position: relative;
@@ -207,9 +190,10 @@ section{
         margin: auto;
         top: 50%;
         transform: translateY(-50%);
-        
+
         .images {
             padding: 45px 0 20px;
+
             img {
                 height: 220px;
                 width: auto;
@@ -226,7 +210,6 @@ section{
 }
 
 .facts {
-    width: 100%;
     height: 25vh;
     background: #95E1D3;
     display: flex;
@@ -253,7 +236,6 @@ section{
             font-size: 70px;
             margin-bottom: 0;
             margin-top: 0;
-            font-weight: normal;
         }
 
         p {
@@ -265,9 +247,7 @@ section{
 }
 
 .services {
-    width: 100%;
     height: 75vh;
-    text-align: center;
 
     .con {
         position: relative;
@@ -282,6 +262,7 @@ section{
             display: flex;
             flex-wrap: wrap;
             box-sizing: border-box;
+
             article {
                 width: 33%;
                 display: grid;
@@ -306,7 +287,6 @@ section{
                     margin: 0;
                     padding: 0;
                     font-size: 12px;
-                    font-weight: normal;
                     text-align: left;
                 }
 
@@ -318,7 +298,6 @@ section{
                     padding: 0;
                     font-size: 13px;
                     text-align: left;
-                    color: #999999;
                     margin: 10px 0 0;
                     line-height: 160%;
 
@@ -329,25 +308,24 @@ section{
 }
 
 .devices {
-    height: 90vh;
-    width: 100%;
+    height: 80vh;
     background-image: url(images/Clip5.png);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .services2 {
-    width: 100%;
     height: 75vh;
     max-height: 75vh;
-    text-align: center;
     display: flex;
     align-content: center;
-    
+
     .con {
         width: 100%;
         margin: auto;
-        .accordions{
+
+        .accordions {
             width: 70%;
             height: auto;
             margin: auto;
@@ -355,18 +333,20 @@ section{
             height: 65%;
             flex-wrap: wrap;
             justify-content: space-between;
-            .img{
+
+            .img {
                 height: 100%;
-                width:48%;
+                width: 48%;
                 background-image: url(images/Clip8.png);
                 background-size: cover;
                 background-position: center;
             }
-            .accordionContainer{
+
+            .accordionContainer {
                 height: 100%;
-                width:48%;
-                
-                .accordion{
+                width: 48%;
+
+                .accordion {
                     width: 100%;
                     height: 15%;
                     background: #fff;
@@ -376,21 +356,23 @@ section{
                     align-content: center;
                     margin-bottom: 10px;
                     padding: 10px;
-                    &:hover{
+
+                    &:hover {
                         cursor: pointer;
                     }
-                    &:focus{
+
+                    &:focus {
                         outline: 0;
                     }
-                    
-                    h6{
+
+                    h6 {
                         margin: auto 10px;
-                        padding: 0 ;
-                        font-weight: normal;
+                        padding: 0;
                         font-size: 14px;
                     }
                 }
-                .panal{
+
+                .panal {
                     display: none;
                     height: 50%;
                     width: 100%;
@@ -401,27 +383,26 @@ section{
                     margin-top: -10px;
                     margin-bottom: 10px;
                     overflow-y: scroll;
-                    
-                    
-                    p{
+
+
+                    p {
                         margin: 0;
                         padding: 5px;
                         text-align: left;
                         font-size: 16px;
-                        color: #999999;
                     }
                 }
-                .panal:nth-child(4){
+
+                .panal:nth-child(4) {
                     display: block;
-                    
+
                 }
             }
         }
     }
 }
 
-.quote{
-    width: 100%;
+.quotes {
     height: 25vh;
     background: #F8F8F8;
     display: flex;
@@ -430,5 +411,212 @@ section{
 
     &:hover {
         cursor: default;
+    }
+
+    div {
+        background: red;
+        width: 60%;
+        height: 70%;
+
+        .quote {
+            display: grid;
+            width: 100%;
+            height: 100%;
+
+            img {
+                grid-column: 1;
+                grid-row: 1/3;
+                background: #fff;
+                height: 110px;
+                width: auto;
+            }
+
+            p {
+                grid-column: 2;
+                grid-row: 1;
+                background: #f0f;
+                font-size: 14px;
+            }
+
+            h5 {
+                grid-column: 2;
+                grid-row: 2;
+                background: #ff0;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.team {
+    height: 95vh;
+
+    .con {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .images {
+            padding: 45px 0 20px;
+            display: flex;
+            justify-content: center;
+
+            div {
+
+                img {
+                    height: 370px;
+                    width: auto;
+                    margin: 10px;
+
+                    &:hover {
+                        animation-name: boxShadow;
+                        animation-fill-mode: forwards;
+                        animation-duration: 0.3s;
+                    }
+                }
+
+                h6 {
+                    margin: 0px;
+                    padding: 0;
+                    font-size: 14px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+}
+
+.logos {
+    height: 25vh;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+.work {
+    height: 100vh;
+
+    .con {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+
+        .imgGrid {
+            max-width: 80%;
+            display: grid;
+            margin: auto;
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            img:nth-child(3) {
+                grid-row: 1/3;
+                grid-column: 3/4;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+
+                &:hover {
+                    animation-name: img;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+}
+
+.blog {
+    height: 75vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .posts {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin: auto;
+
+        .post {
+            width: 31%;
+
+
+            .img {
+                background-image: url(images/blog1.png);
+                background-size: cover;
+                background-position: center;
+                height: 210px;
+
+
+                .date {
+                    background: #95E1D3;
+                    width: 15%;
+                    position: relative;
+                    top: 65%;
+                    left: -10px;
+
+
+                    h6 {
+                        font-size: 27px;
+                        margin: 0;
+                        padding: 8px 0;
+                        color: white;
+
+                        span {
+                            font-size: 13px;
+                            margin: 0;
+                            padding: 0;
+                            color: white;
+                        }
+                    }
+                }
+
+            }
+
+            .content {
+                h5 {
+                    font-size: 14px;
+                    text-align: left;
+                    margin: 18px auto 7px;
+                }
+
+                p {
+                    font-size: 15px;
+                    text-align: left;
+                    margin: 0 auto;
+                }
+
+                .viwes {
+                    display: flex;
+
+                    img,
+                    p {
+                        margin: auto 2px;
+                    }
+
+                    img:nth-child(3) {
+                        margin-left: 13px;
+                    }
+                }
+            }
+        }
     }
 }

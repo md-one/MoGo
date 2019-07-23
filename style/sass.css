@@ -16,21 +16,17 @@
     color: black; }
   to {
     color: #fff; } }
+@keyframes img {
+  to {
+    transform: scale(1.1, 1.1); } }
 * {
+  font-weight: normal;
+  color: #333333;
   box-sizing: border-box; }
 
-::-webkit-scrollbar {
-  width: 8px;
-  margin: 10px;
-  padding: 10px; }
-
-::-webkit-scrollbar-track {
-  background: #2c2c2c;
-  width: 18px; }
-
-::-webkit-scrollbar-thumb {
-  background: #95E1D3;
-  border-radius: 10px; }
+p {
+  color: #999999;
+  font-weight: lighter; }
 
 body {
   height: 100vh;
@@ -105,8 +101,7 @@ header {
       width: 100%;
       margin: 0;
       font-size: 60px;
-      text-align: center;
-      font-weight: normal; }
+      text-align: center; }
       header .intro h3:hover {
         cursor: default; }
     header .intro h2 {
@@ -115,8 +110,7 @@ header {
       margin: 0;
       line-height: 100%;
       font-size: 140px;
-      text-align: center;
-      font-weight: normal; }
+      text-align: center; }
       header .intro h2:hover {
         cursor: default; }
     header .intro hr {
@@ -141,33 +135,32 @@ header {
       header .intro button:hover {
         cursor: pointer; }
 
-section .title h3 {
-  font-size: 26px;
-  font-weight: normal;
-  color: #333333;
-  margin: 0; }
-section .title h2 {
-  font-size: 30px;
-  font-weight: normal;
-  color: #333333;
-  margin-top: 5px;
-  margin-bottom: 0; }
-section .title hr {
-  color: #F38181;
-  width: 60px;
-  border: 2px solid #F38181;
-  border-radius: 10px;
-  margin: 25px auto; }
-section .title p {
-  font-size: 15px;
-  font-weight: lighter;
-  color: #999999;
-  margin: 0; }
+section {
+  text-align: center;
+  width: 100%; }
+  section .title {
+    text-align: center;
+    margin: auto; }
+    section .title h3 {
+      font-size: 26px;
+      margin: 0; }
+    section .title h2 {
+      font-size: 30px;
+      margin-top: 5px;
+      margin-bottom: 0; }
+    section .title hr {
+      color: #F38181;
+      width: 60px;
+      border: 2px solid #F38181;
+      border-radius: 10px;
+      margin: 25px auto; }
+    section .title p {
+      font-size: 15px;
+      margin: 0 auto;
+      width: 63%; }
 
 .aboutUs {
-  width: 100%;
-  height: 75vh;
-  text-align: center; }
+  height: 75vh; }
   .aboutUs .con {
     position: relative;
     width: 100%;
@@ -186,7 +179,6 @@ section .title p {
           animation-duration: 0.3s; }
 
 .facts {
-  width: 100%;
   height: 25vh;
   background: #95E1D3;
   display: flex;
@@ -208,17 +200,14 @@ section .title p {
     .facts .box h4 {
       font-size: 70px;
       margin-bottom: 0;
-      margin-top: 0;
-      font-weight: normal; }
+      margin-top: 0; }
     .facts .box p {
       font-size: 15px;
       margin-bottom: 0;
       margin-top: 0; }
 
 .services {
-  width: 100%;
-  height: 75vh;
-  text-align: center; }
+  height: 75vh; }
   .services .con {
     position: relative;
     width: 100%;
@@ -252,7 +241,6 @@ section .title p {
           margin: 0;
           padding: 0;
           font-size: 12px;
-          font-weight: normal;
           text-align: left; }
         .services .con .articles article p {
           grid-row: 2;
@@ -262,22 +250,19 @@ section .title p {
           padding: 0;
           font-size: 13px;
           text-align: left;
-          color: #999999;
           margin: 10px 0 0;
           line-height: 160%; }
 
 .devices {
-  height: 90vh;
-  width: 100%;
+  height: 80vh;
   background-image: url(images/Clip5.png);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  background-attachment: fixed; }
 
 .services2 {
-  width: 100%;
   height: 75vh;
   max-height: 75vh;
-  text-align: center;
   display: flex;
   align-content: center; }
   .services2 .con {
@@ -317,7 +302,6 @@ section .title p {
           .services2 .con .accordions .accordionContainer .accordion h6 {
             margin: auto 10px;
             padding: 0;
-            font-weight: normal;
             font-size: 14px; }
         .services2 .con .accordions .accordionContainer .panal {
           display: none;
@@ -334,19 +318,154 @@ section .title p {
             margin: 0;
             padding: 5px;
             text-align: left;
-            font-size: 16px;
-            color: #999999; }
+            font-size: 16px; }
         .services2 .con .accordions .accordionContainer .panal:nth-child(4) {
           display: block; }
 
-.quote {
-  width: 100%;
+.quotes {
   height: 25vh;
   background: #F8F8F8;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .quote:hover {
+  .quotes:hover {
     cursor: default; }
+  .quotes div {
+    background: red;
+    width: 60%;
+    height: 70%; }
+    .quotes div .quote {
+      display: grid;
+      width: 100%;
+      height: 100%; }
+      .quotes div .quote img {
+        grid-column: 1;
+        grid-row: 1/3;
+        background: #fff;
+        height: 110px;
+        width: auto; }
+      .quotes div .quote p {
+        grid-column: 2;
+        grid-row: 1;
+        background: #f0f;
+        font-size: 14px; }
+      .quotes div .quote h5 {
+        grid-column: 2;
+        grid-row: 2;
+        background: #ff0;
+        font-size: 22px; }
+
+.team {
+  height: 95vh; }
+  .team .con {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%); }
+    .team .con .images {
+      padding: 45px 0 20px;
+      display: flex;
+      justify-content: center; }
+      .team .con .images div img {
+        height: 370px;
+        width: auto;
+        margin: 10px; }
+        .team .con .images div img:hover {
+          animation-name: boxShadow;
+          animation-fill-mode: forwards;
+          animation-duration: 0.3s; }
+      .team .con .images div h6 {
+        margin: 0px;
+        padding: 0;
+        font-size: 14px; }
+      .team .con .images div p {
+        margin: 0;
+        font-size: 16px; }
+
+.logos {
+  height: 25vh;
+  background: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .logos:hover {
+    cursor: default; }
+
+.work {
+  height: 100vh; }
+  .work .con {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    .work .con .imgGrid {
+      max-width: 80%;
+      display: grid;
+      margin: auto;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+      .work .con .imgGrid img:nth-child(3) {
+        grid-row: 1/3;
+        grid-column: 3/4; }
+      .work .con .imgGrid img {
+        width: 100%;
+        height: auto; }
+        .work .con .imgGrid img:hover {
+          animation-name: img;
+          animation-duration: 0.3s;
+          animation-fill-mode: forwards; }
+
+.blog {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+  .blog .posts {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: auto; }
+    .blog .posts .post {
+      width: 31%; }
+      .blog .posts .post .img {
+        background-image: url(images/blog1.png);
+        background-size: cover;
+        background-position: center;
+        height: 210px; }
+        .blog .posts .post .img .date {
+          background: #95E1D3;
+          width: 15%;
+          position: relative;
+          top: 65%;
+          left: -10px; }
+          .blog .posts .post .img .date h6 {
+            font-size: 27px;
+            margin: 0;
+            padding: 8px 0;
+            color: white; }
+            .blog .posts .post .img .date h6 span {
+              font-size: 13px;
+              margin: 0;
+              padding: 0;
+              color: white; }
+      .blog .posts .post .content h5 {
+        font-size: 14px;
+        text-align: left;
+        margin: 18px auto 7px; }
+      .blog .posts .post .content p {
+        font-size: 15px;
+        text-align: left;
+        margin: 0 auto; }
+      .blog .posts .post .content .viwes {
+        display: flex; }
+        .blog .posts .post .content .viwes img,
+        .blog .posts .post .content .viwes p {
+          margin: auto 2px; }
+        .blog .posts .post .content .viwes img:nth-child(3) {
+          margin-left: 13px; }
 
 /*# sourceMappingURL=sass.css.map */
