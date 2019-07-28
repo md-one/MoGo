@@ -1,0 +1,34 @@
+@media only screen and (max-width: 768px) {
+    * {
+  box-sizing: border-box;
+}
+    html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+    .logos {
+        height: 25vh;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .team {
+        .con {
+            .images {
+                flex-direction: column;
+            }
+        }
+    }
+
+}
+
+/* xs (for phones - screens less than 768px wide)
+sm (for tablets - screens equal to or greater than 768px wide)
+md (for small laptops - screens equal to or greater than 992px wide)
+lg (for laptops and desktops - screens equal to or greater than 1200px wide) */

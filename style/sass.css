@@ -21,13 +21,37 @@
     transform: scale(1.1, 1.1); } }
 * {
   font-weight: normal;
-  color: #333333;
   box-sizing: border-box; }
 
 p {
   color: #999999;
   font-weight: lighter; }
 
+h1, h2, h4, h5, h6 {
+  color: #333333; }
+
+@media only screen and (max-width: 768px) {
+  * {
+    box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; }
+
+  .logos {
+    height: 25vh; }
+    .logos img {
+      max-width: 100%; }
+
+  .team .con .images {
+    flex-direction: column; } }
+/* xs (for phones - screens less than 768px wide)
+sm (for tablets - screens equal to or greater than 768px wide)
+md (for small laptops - screens equal to or greater than 992px wide)
+lg (for laptops and desktops - screens equal to or greater than 1200px wide) */
 body {
   height: 100vh;
   width: 100%;
@@ -101,7 +125,8 @@ header {
       width: 100%;
       margin: 0;
       font-size: 60px;
-      text-align: center; }
+      text-align: center;
+      color: white; }
       header .intro h3:hover {
         cursor: default; }
     header .intro h2 {
@@ -110,7 +135,8 @@ header {
       margin: 0;
       line-height: 100%;
       font-size: 140px;
-      text-align: center; }
+      text-align: center;
+      color: white; }
       header .intro h2:hover {
         cursor: default; }
     header .intro hr {
@@ -190,7 +216,6 @@ section {
     height: 100%;
     width: 12%;
     text-align: center;
-    color: white;
     display: flex;
     align-items: center;
     align-self: center;
@@ -200,11 +225,13 @@ section {
     .facts .box h4 {
       font-size: 70px;
       margin-bottom: 0;
-      margin-top: 0; }
+      margin-top: 0;
+      color: white; }
     .facts .box p {
       font-size: 15px;
       margin-bottom: 0;
-      margin-top: 0; }
+      margin-top: 0;
+      color: white; }
 
 .services {
   height: 75vh; }
@@ -259,6 +286,22 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
+  .devices .title {
+    text-align: center;
+    margin: auto;
+    padding-top: 50px; }
+  .devices .tablet {
+    width: 400px;
+    height: auto;
+    position: relative;
+    bottom: 2px;
+    left: 20%;
+    transform: translateX(-50%); }
+  .devices .phone {
+    width: 200px;
+    height: auto;
+    position: relative;
+    bottom: -60px; }
 
 .services2 {
   height: 75vh;
@@ -313,7 +356,7 @@ section {
           border-top: 0;
           margin-top: -10px;
           margin-bottom: 10px;
-          overflow-y: scroll; }
+          overflow-y: hidden; }
           .services2 .con .accordions .accordionContainer .panal p {
             margin: 0;
             padding: 5px;
@@ -325,36 +368,110 @@ section {
 .quotes {
   height: 25vh;
   background: #F8F8F8;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  display: grid;
+  grid-template-columns: auto 5% 60% 5% auto;
+  grid-template-rows: 100%; }
   .quotes:hover {
     cursor: default; }
-  .quotes div {
-    background: red;
-    width: 60%;
-    height: 70%; }
-    .quotes div .quote {
-      display: grid;
-      width: 100%;
-      height: 100%; }
-      .quotes div .quote img {
-        grid-column: 1;
-        grid-row: 1/3;
-        background: #fff;
-        height: 110px;
-        width: auto; }
-      .quotes div .quote p {
-        grid-column: 2;
-        grid-row: 1;
-        background: #f0f;
-        font-size: 14px; }
-      .quotes div .quote h5 {
-        grid-column: 2;
-        grid-row: 2;
-        background: #ff0;
-        font-size: 22px; }
+  .quotes .quote {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    display: none;
+    padding: 8px; }
+    .quotes .quote img {
+      height: 130px;
+      width: auto;
+      align-self: center; }
+    .quotes .quote .content {
+      text-align: left;
+      padding: 18px;
+      width: 110%;
+      align-self: center;
+      height: auto;
+      padding-right: 0; }
+      .quotes .quote .content p {
+        font-size: 22px;
+        margin-bottom: 10px;
+        margin-top: 10px; }
+      .quotes .quote .content h5 {
+        font-size: 22px;
+        margin: 0; }
+  .quotes #quote1 {
+    display: flex; }
+  .quotes #prev {
+    grid-column: 2; }
+  .quotes #next {
+    grid-column: 4; }
+  .quotes #next,
+  .quotes #prev {
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .quotes #next a,
+    .quotes #prev a {
+      font-size: 40px;
+      font-weight: bolder;
+      transform: translateY(-5px);
+      color: #CCCCCC; }
+      .quotes #next a:hover,
+      .quotes #prev a:hover {
+        color: #95E1D3;
+        cursor: pointer; }
 
+/*.quotes {
+    height: 25vh;
+    background: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: default;
+    }
+
+    div {
+        width: 60%;
+        height: 70%;
+        .quote {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+
+            img {
+                height: 130px;
+                width: auto;
+                align-self: center;
+            }
+
+            .content {
+                text-align: left;
+                padding: 18px;
+                width: 100%;
+                align-self: center;
+                height: auto;
+
+                p {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                }
+
+                h5 {
+                    font-size: 22px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}*/
 .team {
   height: 95vh; }
   .team .con {
@@ -418,6 +535,82 @@ section {
           animation-duration: 0.3s;
           animation-fill-mode: forwards; }
 
+.testimonial {
+  height: 40vh;
+  display: flex;
+  align-content: center; }
+  .testimonial .first {
+    width: 60%;
+    margin: auto;
+    display: flex; }
+    .testimonial .first img {
+      height: 200px;
+      width: auto;
+      clear: none; }
+    .testimonial .first .content {
+      text-align: left;
+      padding: 18px; }
+      .testimonial .first .content p {
+        font-size: 22px;
+        clear: none;
+        margin-top: 10px;
+        align-self: center; }
+      .testimonial .first .content hr {
+        color: #F38181;
+        width: 60px;
+        border: 2px solid #F38181;
+        border-radius: 10px;
+        margin: 0 10px 0 2px;
+        clear: none;
+        float: left;
+        position: relative;
+        top: 7%; }
+      .testimonial .first .content h5 {
+        clear: none;
+        margin: 0;
+        float: left;
+        font-size: 22px; }
+
+.peopleSay {
+  height: 80vh;
+  background-image: url(images/Clip13.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  .peopleSay .peple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%; }
+    .peopleSay .peple article {
+      width: 45%;
+      min-width: 30%;
+      margin: auto;
+      display: flex; }
+      .peopleSay .peple article img {
+        height: 95px;
+        width: auto;
+        clear: none; }
+      .peopleSay .peple article .content {
+        text-align: left;
+        padding: 8px; }
+        .peopleSay .peple article .content h5 {
+          margin: 0;
+          font-size: 15px; }
+        .peopleSay .peple article .content p {
+          font-size: 13px;
+          clear: none;
+          margin-top: 10px;
+          align-self: center;
+          color: white; }
+        .peopleSay .peple article .content hr {
+          color: #F38181;
+          width: 60px;
+          border: 2px solid #F38181;
+          border-radius: 10px;
+          margin: 0 10px 0 2px; }
+
 .blog {
   height: 75vh;
   display: flex;
@@ -467,5 +660,37 @@ section {
           margin: auto 2px; }
         .blog .posts .post .content .viwes img:nth-child(3) {
           margin-left: 13px; }
+
+.map {
+  height: 20vh;
+  background-image: url(images/map.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .map .content img {
+    height: 25px;
+    width: auto; }
+    .map .content img:hover {
+      cursor: pointer; }
+  .map .content h4 {
+    font-size: 24px;
+    margin: 9px;
+    color: #F38181;
+    font-weight: normal; }
+    .map .content h4:hover {
+      cursor: pointer; }
+  .map .content hr {
+    color: #F38181;
+    width: 60px;
+    border: 2px solid #F38181;
+    border-radius: 10px;
+    margin: 5px auto; }
+
+footer {
+  width: 100%;
+  height: 50vh; }
 
 /*# sourceMappingURL=sass.css.map */

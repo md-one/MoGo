@@ -1,7 +1,11 @@
 <html>
 
 <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/sass.css">
+
 </head>
 
 <body>
@@ -116,6 +120,8 @@
             <h2>AMAZING SERVICES</h2>
             <hr>
         </div>
+        <img class="tablet" src="style/images/display%20bg%20768x1024.png">
+        <img class="phone" src="style/images/phone.png">
     </section>
 
     <section class="Services2">
@@ -132,34 +138,54 @@
                         <img src="style/icons/PICTURE.svg">
                         <h6>PHOTOGRAPHY</h6>
                     </button>
-                    <div class="panal" id="panal1"></div>
+                    <div class="panal" id="panal1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
                     <button class="accordion" onclick="openpanal('panal2')">
                         <img src="style/icons/EQUALIZER.svg">
                         <h6>PHOTOGRAPHY</h6>
                     </button>
                     <div class="panal" id="panal2">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <button class="accordion" onclick="openpanal('panal3')">
                         <img src="style/icons/BULLSEYE.svg">
                         <h6>PHOTOGRAPHY</h6>
                     </button>
-                    <div class="panal" id="panal3"></div>
+                    <div class="panal" id="panal3">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="quotes">
-        <div>
-            <div class="quote">
-                <img src="style/icons/BOOK%202.svg">
-
+        <div id="prev"><a class="prevB" onclick="plusSlides(-1)">&#10094;</a></div>
+        <div id="next"><a class="nextB" onclick="plusSlides(1)">&#10095;</a></div>
+        <div class="quote" id="quote1">
+            <img src="style/icons/BOOK%202.svg">
+            <div class="content">
                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
                 <h5>Jon Doe</h5>
             </div>
-
+        </div>
+        <div class="quote" id="quote2">
+            <img src="style/icons/COMPUTER%20-%20OK.svg">
+            <div class="content">
+                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                <h5>Jon Doe</h5>
+            </div>
+        </div>
+        <div class="quote" id="quote3">
+            <img src="style/icons/ALARM.svg">
+            <div class="content">
+                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                <h5>Jon Doe</h5>
+            </div>
         </div>
     </section>
 
@@ -190,11 +216,11 @@
             </div>
         </div>
     </section>
-    
-   <section class="logos">
+
+    <section class="logos">
         <img src="style/images/logos.png">
     </section>
-    
+
     <section class="work">
         <div class="con">
             <div class="title">
@@ -215,9 +241,74 @@
             </div>
         </div>
     </section>
-    
-    <section class="peopleSay"></section>
-    
+
+    <section class="testimonial">
+        <div class="first">
+            <img src="style/images/Clip12.png">
+            <div class="content">
+                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                <hr>
+                <h5>Joshua Earle</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="peopleSay">
+        <div class="title">
+                <h3>We work with</h3>
+                <h2>AMAZING SERVICES</h2>
+                <hr>
+            </div>
+        
+        <div class="peple">
+            <article>
+                <img src="style/images/Clip12.png">
+                <div class="content">
+                    <h5>Joshua Earle</h5>
+                    <h5>Joshua Earle</h5>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                
+                
+            </div>
+            </article>
+            <article>
+                <img src="style/images/Clip12.png">
+                <div class="content">
+                    <h5>Joshua Earle</h5>
+                    <h5>Joshua Earle</h5>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                
+                
+            </div>
+            </article>
+            <article>
+                <img src="style/images/Clip12.png">
+                <div class="content">
+                    <h5>Joshua Earle</h5>
+                    <h5>Joshua Earle</h5>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                
+                
+            </div>
+            </article>
+            <article>
+                <img src="style/images/Clip12.png">
+                <div class="content">
+                    <h5>Joshua Earle</h5>
+                    <h5>Joshua Earle</h5>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                
+                
+            </div>
+            </article>
+            
+        </div>
+    </section>
+
     <section class="blog">
         <div class="title">
             <h3>We work with</h3>
@@ -284,8 +375,13 @@
             </div>
         </div>
     </section>
+
+    <section class="map">
+        <div class="content"><img src="style/icons/map.svg"><h4>OPEN MAP</h4><hr></div>
+    </section>
     
-    
+    <footer></footer>
+
 </body>
 
 <script src="js.js"></script></html>
