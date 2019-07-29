@@ -1,11 +1,9 @@
 <html>
 
 <head>
-    
     <meta charset="UTF-8">
-    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/sass.css">
-
 </head>
 
 <body>
@@ -20,7 +18,21 @@
             <a><img src="style/icons/SHOPPING%20CART.svg"></a>
             <a><img src="style/icons/MAGNIFYING%20GLASS.svg"></a>
         </ul>
+        <img src="style/icons/Hamburger%20button.svg" onclick="openmenu2()">
     </nav>
+    <section class="menu" id="menu">
+        <ul>
+            <a>ABOUT</a>
+            <a>SERVICE</a>
+            <a>WORK</a>
+            <a>BLOG</a>
+            <a>CONTACT</a>
+            <div class="icons">
+                <a><img src="style/icons/SHOPPING%20CART.svg"></a>
+                <a><img src="style/icons/MAGNIFYING%20GLASS.svg"></a>
+            </div>
+        </ul>
+    </section>
 
     <header>
         <div class="overlay"></div>
@@ -137,6 +149,7 @@
                     <button class="accordion" onclick="openpanal('panal1')">
                         <img src="style/icons/PICTURE.svg">
                         <h6>PHOTOGRAPHY</h6>
+                        <img class="arrow" src="style/icons/ARROW%20-%20DOWN.svg">
                     </button>
                     <div class="panal" id="panal1">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -255,57 +268,55 @@
 
     <section class="peopleSay">
         <div class="title">
-                <h3>We work with</h3>
-                <h2>AMAZING SERVICES</h2>
-                <hr>
-            </div>
-        
+            <h3>We work with</h3>
+            <h2>AMAZING SERVICES</h2>
+            <hr>
+        </div>
+
         <div class="peple">
             <article>
-                <img src="style/images/Clip12.png">
+                <img src="style/images/person%201.png">
                 <div class="content">
-                    <h5>Joshua Earle</h5>
-                    <h5>Joshua Earle</h5>
+                    <h5>MATTHEW DIX</h5>
+                    <h5>Graphic Design</h5>
                     <hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-                
-                
-            </div>
+
+
+                </div>
             </article>
             <article>
-                <img src="style/images/Clip12.png">
+                <img src="style/images/person%202.png">
                 <div class="content">
-                    <h5>Joshua Earle</h5>
-                    <h5>Joshua Earle</h5>
+                    <h5>NICK KARVOUNIS</h5>
+                    <h5>Graphic Design</h5>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-                
-                
-            </div>
+                    <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+
+
+                </div>
             </article>
             <article>
-                <img src="style/images/Clip12.png">
+                <img src="style/images/person%203.png">
                 <div class="content">
-                    <h5>Joshua Earle</h5>
-                    <h5>Joshua Earle</h5>
+                    <h5>JAELYNN CASTILLO </h5>
+                    <h5>Graphic Design</h5>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-                
-                
-            </div>
+                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+
+                </div>
             </article>
             <article>
-                <img src="style/images/Clip12.png">
+                <img src="style/images/person%204.png">
                 <div class="content">
-                    <h5>Joshua Earle</h5>
-                    <h5>Joshua Earle</h5>
+                    <h5>MIKE PETRUCCI</h5>
+                    <h5>Graphic Design</h5>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-                
-                
-            </div>
+                    <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+
+                </div>
             </article>
-            
+
         </div>
     </section>
 
@@ -377,11 +388,56 @@
     </section>
 
     <section class="map">
-        <div class="content"><img src="style/icons/map.svg"><h4>OPEN MAP</h4><hr></div>
+        <div class="content"><img src="style/icons/map.svg">
+            <h4>OPEN MAP</h4>
+            <hr>
+        </div>
     </section>
+
+    <footer>
+        <div class="mogo">
+        <h1>MoGo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <h4><span>15k</span> followers</h4>
+            
+            <hr>
+            <h4>Follow Us:
+                <img src="style/icons/socialMedia/facebook.svg">
+                <img src="style/icons/socialMedia/twitter.svg">
+                <img src="style/icons/socialMedia/instagram.svg">
+                <img src="style/icons/socialMedia/pinterest.svg">
+                <img src="style/icons/socialMedia/google%20plus.svg">
+                <img src="style/icons/socialMedia/youtube.svg">
+                <img src="style/icons/socialMedia/dribbble.svg">
+                <img src="style/icons/socialMedia/tumblr.svg">
+            </h4>
+            <div class="subscribe">
+                <input placeholder="Your Email..."><button>SUBSCRIBE</button>
+            </div>
+            
+        </div>
+        <div class="blogs"></div>
+        <div class="instagram">
+            <div class="imgGrid">
+                <img src="style/images/Rectangle%201.png">
+                <img src="style/images/Rectangle%201.png">
+                <img src="style/images/Rectangle%201.png">
+                <img src="style/images/Rectangle%201.png">
+                <img src="style/images/Rectangle%201.png">
+                <img src="style/images/Rectangle%201.png">
+                <img src="style/images/Rectangle%201.png">
+                <img src="style/images/Rectangle%201.png">
+                <img src="style/images/Rectangle%201.png">
+                
+
+            </div>
+        </div>
+        <div class="footer"><h2>© 2016 MoGo free PSD template by <span>Laaqiq</span> and developed by <span>Mahdi</span></h2></div>
     
-    <footer></footer>
+    </footer>
 
 </body>
 
-<script src="js.js"></script></html>
+<script src="js.js"></script>
+
+</html>

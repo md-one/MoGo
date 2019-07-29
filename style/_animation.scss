@@ -36,3 +36,16 @@
         transform: scale(1.1, 1.1);
     }
 }
+
+@keyframes menu{
+    from{
+        opacity: 10%;
+        transform: translateY(-20%);
+        transform: translateZ(-10%);
+    }
+    to{
+        opacity: 100%;
+        transform: translateY(0%);
+        transform: translateZ(0%);
+    }
+}

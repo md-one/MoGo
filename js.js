@@ -12,20 +12,42 @@ function scrollFunction() {
 }
 
 
- function openpanal(panalid) {
-            var i, panal, tablinks;
-            panal = document.getElementsByClassName("panal");
-            
-            for (i = 0; i < panal.length; i++) {
-                panal[i].style.display = "none";
-            }
-     
-            /*
+function openpanal(panalid) {
+    var i, panal, tablinks;
+    panal = document.getElementsByClassName("panal");
+
+    for (i = 0; i < panal.length; i++) {
+        panal[i].style.display = "none";
+    }
+
+    /*
             ask about this in dicure
             tablinks = document.getElementsByClassName("accordion");
      
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }*/
-            document.getElementById(panalid).style.display = "block";
+    document.getElementById(panalid).style.display = "block";
+}
+
+function openmenu() {
+    var menu = document.getElementById("menu"),
+        button = document.getElementById("button");
+    button.onclick = function () {
+        if (menu.style.display === "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
         }
+    };
+}
+
+function openmenu2() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+
