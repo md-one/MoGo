@@ -4,10 +4,20 @@ window.onscroll = function () {
 
 function scrollFunction() {
     var nav = document.getElementById("nav");
+    var navLi = document.getElementsByClassName("navLi");
+
     if (document.body.scrollTop > 730 || document.documentElement.scrollTop > 730) {
-        nav.style.animation = "nav 0.5s forwards";
+        nav.style.background = "rgba(225, 225, 225, 0.2)";
+        for (let i = 0; i < navLi.length; i++) {
+            navLi[i].style.color = "#000000";
+            navLi[i].style.fill = "000000";
+        }
     } else {
-        nav.style.animation = "navr 0.5s forwards";
+        nav.style.background = "rgba(225, 225, 225, 0)";
+        for (let i = 0; i < navLi.length; i++) {
+            navLi[i].style.color = "#ffffff";
+            navLi[i].style.fill = "ffffff";
+        }
     }
 }
 
@@ -50,4 +60,3 @@ function openmenu2() {
         menu.style.display = "none";
     }
 }
-

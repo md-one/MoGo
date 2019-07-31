@@ -1,5 +1,6 @@
-@import "./animation.scss";
 @import "./variables.scss";
+@import "./animation.scss";
+
 
 
 
@@ -20,7 +21,7 @@ nav {
     grid-template-columns: 40% 60%;
     color: white;
 
-    \h3 {
+    h3 {
         grid-column: 1;
         font-size: 40px;
         margin: 0;
@@ -47,6 +48,8 @@ nav {
         a {
             font-size: 17px;
             margin: 20px;
+            text-decoration: none;
+            color: white;
 
             &:hover {
                 cursor: pointer;
@@ -62,12 +65,13 @@ nav {
             }
         }
     }
-    
-    > img{
+
+    >img {
         display: none;
     }
 }
-.menu{
+
+.menu {
     display: none;
 }
 
@@ -149,6 +153,11 @@ header {
 
             &:hover {
                 cursor: pointer;
+                background: rgba(225, 225, 255, 0.1);
+            }
+
+            &:focus {
+                outline: 0;
             }
         }
     }
@@ -387,7 +396,6 @@ section {
                     background: #fff;
                     border: 1px solid #E5E5E5;
                     display: flex;
-                    justify-content: flex-start;
                     align-content: center;
                     margin-bottom: 10px;
                     padding: 10px;
@@ -405,9 +413,11 @@ section {
                         padding: 0;
                         font-size: 14px;
                     }
-                    
-                    .arrow{
-                        display: none;
+
+                    .bb {}
+
+                    .arrow {
+                        place-self: #E5E5E5;
                     }
                 }
 
@@ -630,9 +640,10 @@ section {
     &:hover {
         cursor: default;
     }
+
     img {
-            max-width: 100%;
-        }
+        max-width: 100%;
+    }
 }
 
 .work {
@@ -728,58 +739,71 @@ section {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
 
-    .peple {
+
+
+    .con {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        flex-wrap: wrap;
-        width: 60%;
-        article {
-            width: 45%;
-            min-width: 30%;
-            margin: auto;
+        justify-content: space-around;
+        align-content: center;
+        flex-direction: column;
+        align-self: center;
+        min-height: 60%;
+
+        .peple {
             display: flex;
+            justify-content: center;
+            align-items: center;
 
-            img {
-                height: 95px;
-                width: auto;
-                clear: none;
-            }
+            flex-wrap: wrap;
+            margin: auto;
+            width: 60%;
 
-            .content {
-                text-align: left;
-                padding: 8px;
-                
-                h5 {
-                    margin: 0;
-                    font-size: 15px;
+            article {
+                width: 45%;
+                min-width: 30%;
+                margin: 20px auto;
+                display: flex;
 
-                }
-                
-                p {
-                    font-size: 13px;
+                img {
+                    height: 95px;
+                    width: auto;
                     clear: none;
-                    margin-top: 10px;
-                    align-self: center;
-                    color: white;
                 }
 
-                hr {
-                    color: #F38181;
-                    width: 60px;
-                    border: 2px solid #F38181;
-                    border-radius: 10px;
-                    margin: 0 10px 0 2px;
-                    
-                }
+                .content {
+                    text-align: left;
+                    padding: 8px;
 
-                
+                    h5 {
+                        margin: 0;
+                        font-size: 15px;
+
+                    }
+
+                    p {
+                        font-size: 13px;
+                        clear: none;
+                        margin-top: 10px;
+                        align-self: center;
+                        color: white;
+                    }
+
+                    hr {
+                        color: #F38181;
+                        width: 60px;
+                        border: 2px solid #F38181;
+                        border-radius: 10px;
+                        margin: 0 10px 0 2px;
+
+                    }
+
+
+                }
             }
         }
     }
-
 }
 
 .blog {
@@ -911,41 +935,49 @@ footer {
     display: grid;
     grid-template-columns: 40% 33% 27%;
     grid-template-rows: auto 7vh;
-    
-    .mogo{
+
+    .mogo {
         grid-row: 1;
         grid-column: 1;
         width: 100%;
-        height: 80%;
-        align-self: center;
-        h1{
+        height: 90%;
+        align-self: flex-end;
+
+        h1 {
             font-size: 40px;
             margin: 0;
-            
+
         }
-        p{
+
+        p {
             font-size: 12px;
         }
-        h4{
+
+        h4 {
             font-size: 13px;
-            span{
+
+            span {
                 font-size: 16px;
             }
-            img{
+
+            img {
                 height: 15px;
             }
         }
-        .subscribe{
+
+        .subscribe {
             display: flex;
             width: 80%;
-            input{
+
+            input {
                 height: 35px;
                 border: 1px solid #ccc;
                 margin: 0;
                 width: 60%;
                 padding: 10px;
             }
-            button{
+
+            button {
                 height: 35px;
                 background: #95E1D3;
                 border: 0;
@@ -955,21 +987,72 @@ footer {
             }
         }
     }
-    .blogs{
+
+    .blogs {
         grid-row: 1;
         grid-column: 2;
-        background-color: antiquewhite;
         width: 100%;
-        height: 100%;
+        height: 90%;
+        align-self: flex-end;
+        padding: 0 10px 0;
+
+        h4 {
+            font-size: 14px;
+            margin: 5px 0;
+            padding: 0%;
+        }
+
+        .blogGrid {
+            width: 100%;
+            justify-self: center;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 40% 60%;
+            grid-row-gap: 20px;
+            margin: 0;
+
+
+            img {
+                align-self: center;
+                width: 95%;
+                height: auto;
+            }
+
+            .contant {
+                align-self: center;
+                width: 100%;
+                justify-self: center;
+
+                h6 {
+                    font-size: 12px;
+                    margin: 0%;
+                    padding: 0%;
+                }
+
+                p {
+                    margin: 0%;
+                    font-size: 13px;
+                }
+            }
+        }
+
     }
-    .instagram{
+
+    .instagram {
         grid-row: 1;
-        grid-column: 3;background-color: green;
+        grid-column: 3;
+        background-color: green;
         width: 80%;
-        height: 75%;
-        
-        align-self: center;
-        
+        height: 90%;
+
+        align-self: flex-end;
+
+        h4 {
+            font-size: 14px;
+            margin: 5px;
+            padding: 0%;
+        }
+
         .imgGrid {
             max-width: 100%;
             display: grid;
@@ -977,9 +1060,11 @@ footer {
             grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 3px;
+
             img {
                 width: 100%;
                 height: auto;
+
                 &:hover {
                     animation-name: img;
                     animation-duration: 0.3s;
@@ -987,28 +1072,32 @@ footer {
                 }
             }
         }
+
+        p {
+            font-size: 13px;
+        }
     }
-    .footer{
+
+    .footer {
         grid-row: 2;
         grid-column: 1 / 4;
         width: 100%;
         height: 100%;
         text-align: center;
         display: flex;
-        h2{
+
+        h2 {
             margin: auto;
             font-size: 16px;
             color: #333333;
             align-self: center;
             align-content: center;
-            
-            span{
+
+            span {
                 color: red;
             }
         }
     }
-    
-    
-    
 }
+
 @import "./media.scss";

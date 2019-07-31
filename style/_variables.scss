@@ -1,12 +1,30 @@
-*{
+* {
     font-weight: normal;
-    
     box-sizing: border-box;
 }
-p{
+
+$dark: #333333;
+
+
+p {
     color: #999999;
     font-weight: lighter;
 }
-h1, h2, h4, h5, h6{
+
+h1,
+h2,
+h4,
+h5,
+h6 {
     color: #333333;
 }
+
+/*
+ul {
+    a {
+        color: $dark;
+        text-decoration: none;
+
+    }
+}
+*/
