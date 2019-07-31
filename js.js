@@ -26,17 +26,11 @@ function openpanal(panalid) {
     var i, panal, tablinks;
     panal = document.getElementsByClassName("panal");
 
+
     for (i = 0; i < panal.length; i++) {
         panal[i].style.display = "none";
     }
 
-    /*
-            ask about this in dicure
-            tablinks = document.getElementsByClassName("accordion");
-     
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }*/
     document.getElementById(panalid).style.display = "block";
 }
 

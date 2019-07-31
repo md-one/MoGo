@@ -395,8 +395,6 @@ section {
                     height: 15%;
                     background: #fff;
                     border: 1px solid #E5E5E5;
-                    display: flex;
-                    align-content: center;
                     margin-bottom: 10px;
                     padding: 10px;
 
@@ -408,16 +406,28 @@ section {
                         outline: 0;
                     }
 
-                    h6 {
-                        margin: auto 10px;
-                        padding: 0;
-                        font-size: 14px;
+                    .con {
+                        width: 90%;
+                        height: 100%;
+                        display: flex;
+                        align-content: center;
+                        float: left;
+
+                        h6 {
+                            margin: auto 10px;
+                            padding: 0;
+                            font-size: 14px;
+                        }
                     }
 
-                    .bb {}
-
                     .arrow {
-                        place-self: #E5E5E5;
+                        width: 10%;
+                        height: 100%;
+                        float: right;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 1s;
                     }
                 }
 
@@ -600,18 +610,63 @@ section {
             display: flex;
             justify-content: center;
 
-            div {
+            .teammember {
 
-                img {
+                >.img {
                     height: 370px;
-                    width: auto;
+                    width: 300px;
                     margin: 10px;
+                    background-image: url(images/Clip9.png);
+                    background-size: cover;
+                    background-position: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
                     &:hover {
                         animation-name: boxShadow;
                         animation-fill-mode: forwards;
                         animation-duration: 0.3s;
+
+                        .sm {
+                            opacity: 100%;
+                        }
                     }
+
+                    .sm {
+                        height: 40px;
+                        width: 180px;
+                        background: #FCE38A;
+                        z-index: 2;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        opacity: 0%;
+
+                        .icon {
+                            width: 25%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &:hover {
+                                background-color: #F38181;
+                                cursor: pointer;
+
+                                .a {
+                                    fill: #fff;
+                                }
+                            }
+
+                            svg {
+                                height: 20px;
+                                width: auto;
+                                fill: #fff;
+                            }
+                        }
+                    }
+
                 }
 
                 h6 {
@@ -626,7 +681,19 @@ section {
                 }
             }
 
+            .teammember:nth-child(2) {
+                .img {
+                    background-image: url(images/Clip10.png);
+                }
+            }
+
+            .teammember:nth-child(3) {
+                .img {
+                    background-image: url(images/Clip11.png);
+                }
+            }
         }
+
     }
 }
 
@@ -808,7 +875,6 @@ section {
 
 .blog {
     height: 75vh;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -823,13 +889,11 @@ section {
         .post {
             width: 31%;
 
-
             .img {
                 background-image: url(images/blog1.png);
                 background-size: cover;
                 background-position: center;
                 height: 210px;
-
 
                 .date {
                     background: #95E1D3;
@@ -837,7 +901,6 @@ section {
                     position: relative;
                     top: 65%;
                     left: -10px;
-
 
                     h6 {
                         font-size: 27px;
@@ -869,6 +932,23 @@ section {
                     margin: 0 auto;
                 }
 
+                .mogohr {
+                    margin: 0;
+                    background: #E5E5E5;
+                    box-shadow: 0;
+                    outline: 0;
+                    border-width: 0;
+                    border-top: 1px solid #E5E5E5;
+                }
+
+                hr {
+                    background: #E5E5E5;
+                    box-shadow: 0;
+                    outline: 0;
+                    border-width: 0;
+                    border: 1px solid #E5E5E5;
+                }
+
                 .viwes {
                     display: flex;
 
@@ -883,6 +963,25 @@ section {
                 }
             }
         }
+
+        .post:nth-child(1) {
+            .img {
+                background-image: url(images/blog1.png);
+            }
+        }
+
+        .post:nth-child(2) {
+            .img {
+                background-image: url(images/blog2.png);
+            }
+        }
+
+        .post:nth-child(3) {
+            .img {
+                background-image: url(images/blog3.png);
+            }
+        }
+
     }
 }
 
@@ -944,17 +1043,29 @@ footer {
         align-self: flex-end;
 
         h1 {
-            font-size: 40px;
+            font-size: 45px;
             margin: 0;
+            color: #CCCCCC;
 
         }
 
         p {
             font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            margin: 0;
+            background: #E5E5E5;
+            box-shadow: 0;
+            outline: 0;
+            border-width: 0;
+            border-top: 1px solid #E5E5E5;
         }
 
         h4 {
             font-size: 13px;
+            margin: 10px auto;
 
             span {
                 font-size: 16px;
@@ -963,11 +1074,14 @@ footer {
             img {
                 height: 15px;
             }
+
+
         }
 
         .subscribe {
             display: flex;
             width: 80%;
+            margin-top: 25px;
 
             input {
                 height: 35px;
@@ -1008,7 +1122,7 @@ footer {
             display: grid;
             grid-template-rows: auto auto auto;
             grid-template-columns: 40% 60%;
-            grid-row-gap: 20px;
+            grid-row-gap: 15px;
             margin: 0;
 
 
@@ -1041,11 +1155,12 @@ footer {
     .instagram {
         grid-row: 1;
         grid-column: 3;
-        background-color: green;
-        width: 80%;
+        width: 85%;
         height: 90%;
 
         align-self: flex-end;
+        display: flex;
+        flex-wrap: wrap;
 
         h4 {
             font-size: 14px;

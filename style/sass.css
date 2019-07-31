@@ -332,20 +332,30 @@ section {
           height: 15%;
           background: #fff;
           border: 1px solid #E5E5E5;
-          display: flex;
-          align-content: center;
           margin-bottom: 10px;
           padding: 10px; }
           .services2 .con .accordions .accordionContainer .accordion:hover {
             cursor: pointer; }
           .services2 .con .accordions .accordionContainer .accordion:focus {
             outline: 0; }
-          .services2 .con .accordions .accordionContainer .accordion h6 {
-            margin: auto 10px;
-            padding: 0;
-            font-size: 14px; }
+          .services2 .con .accordions .accordionContainer .accordion .con {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            align-content: center;
+            float: left; }
+            .services2 .con .accordions .accordionContainer .accordion .con h6 {
+              margin: auto 10px;
+              padding: 0;
+              font-size: 14px; }
           .services2 .con .accordions .accordionContainer .accordion .arrow {
-            place-self: #E5E5E5; }
+            width: 10%;
+            height: 100%;
+            float: right;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s; }
         .services2 .con .accordions .accordionContainer .panal {
           display: none;
           height: 50%;
@@ -484,21 +494,57 @@ section {
       padding: 45px 0 20px;
       display: flex;
       justify-content: center; }
-      .team .con .images div img {
+      .team .con .images .teammember > .img {
         height: 370px;
-        width: auto;
-        margin: 10px; }
-        .team .con .images div img:hover {
+        width: 300px;
+        margin: 10px;
+        background-image: url(images/Clip9.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .team .con .images .teammember > .img:hover {
           animation-name: boxShadow;
           animation-fill-mode: forwards;
           animation-duration: 0.3s; }
-      .team .con .images div h6 {
+          .team .con .images .teammember > .img:hover .sm {
+            opacity: 100%; }
+        .team .con .images .teammember > .img .sm {
+          height: 40px;
+          width: 180px;
+          background: #FCE38A;
+          z-index: 2;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          opacity: 0%; }
+          .team .con .images .teammember > .img .sm .icon {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .team .con .images .teammember > .img .sm .icon:hover {
+              background-color: #F38181;
+              cursor: pointer; }
+              .team .con .images .teammember > .img .sm .icon:hover .a {
+                fill: #fff; }
+            .team .con .images .teammember > .img .sm .icon svg {
+              height: 20px;
+              width: auto;
+              fill: #fff; }
+      .team .con .images .teammember h6 {
         margin: 0px;
         padding: 0;
         font-size: 14px; }
-      .team .con .images div p {
+      .team .con .images .teammember p {
         margin: 0;
         font-size: 16px; }
+      .team .con .images .teammember:nth-child(2) .img {
+        background-image: url(images/Clip10.png); }
+      .team .con .images .teammember:nth-child(3) .img {
+        background-image: url(images/Clip11.png); }
 
 .logos {
   height: 25vh;
@@ -664,6 +710,19 @@ section {
         font-size: 15px;
         text-align: left;
         margin: 0 auto; }
+      .blog .posts .post .content .mogohr {
+        margin: 0;
+        background: #E5E5E5;
+        box-shadow: 0;
+        outline: 0;
+        border-width: 0;
+        border-top: 1px solid #E5E5E5; }
+      .blog .posts .post .content hr {
+        background: #E5E5E5;
+        box-shadow: 0;
+        outline: 0;
+        border-width: 0;
+        border: 1px solid #E5E5E5; }
       .blog .posts .post .content .viwes {
         display: flex; }
         .blog .posts .post .content .viwes img,
@@ -671,6 +730,12 @@ section {
           margin: auto 2px; }
         .blog .posts .post .content .viwes img:nth-child(3) {
           margin-left: 13px; }
+    .blog .posts .post:nth-child(1) .img {
+      background-image: url(images/blog1.png); }
+    .blog .posts .post:nth-child(2) .img {
+      background-image: url(images/blog2.png); }
+    .blog .posts .post:nth-child(3) .img {
+      background-image: url(images/blog3.png); }
 
 .map {
   height: 20vh;
@@ -714,19 +779,30 @@ footer {
     height: 90%;
     align-self: flex-end; }
     footer .mogo h1 {
-      font-size: 40px;
-      margin: 0; }
+      font-size: 45px;
+      margin: 0;
+      color: #CCCCCC; }
     footer .mogo p {
-      font-size: 12px; }
+      font-size: 12px;
+      margin-bottom: 30px; }
+    footer .mogo hr {
+      margin: 0;
+      background: #E5E5E5;
+      box-shadow: 0;
+      outline: 0;
+      border-width: 0;
+      border-top: 1px solid #E5E5E5; }
     footer .mogo h4 {
-      font-size: 13px; }
+      font-size: 13px;
+      margin: 10px auto; }
       footer .mogo h4 span {
         font-size: 16px; }
       footer .mogo h4 img {
         height: 15px; }
     footer .mogo .subscribe {
       display: flex;
-      width: 80%; }
+      width: 80%;
+      margin-top: 25px; }
       footer .mogo .subscribe input {
         height: 35px;
         border: 1px solid #ccc;
@@ -757,7 +833,7 @@ footer {
       display: grid;
       grid-template-rows: auto auto auto;
       grid-template-columns: 40% 60%;
-      grid-row-gap: 20px;
+      grid-row-gap: 15px;
       margin: 0; }
       footer .blogs .blogGrid img {
         align-self: center;
@@ -777,10 +853,11 @@ footer {
   footer .instagram {
     grid-row: 1;
     grid-column: 3;
-    background-color: green;
-    width: 80%;
+    width: 85%;
     height: 90%;
-    align-self: flex-end; }
+    align-self: flex-end;
+    display: flex;
+    flex-wrap: wrap; }
     footer .instagram h4 {
       font-size: 14px;
       margin: 5px;
