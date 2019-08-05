@@ -87,7 +87,8 @@ header {
         position: absolute;
         height: 100vh;
         width: 100%;
-        background-image: url(images/Gradient%20Overlay.png);
+        background: rgb(244,139,130);
+background: linear-gradient(180deg, rgba(244,139,130,1) 0%, rgba(252,227,138,1) 100%);
         background-position: center;
         background-size: cover;
         opacity: 20%;
