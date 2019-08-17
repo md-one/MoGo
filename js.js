@@ -21,7 +21,6 @@ function scrollFunction() {
     }
 }
 
-
 function openpanal(panalid) {
     var i, panal, tablinks;
     panal = document.getElementsByClassName("panal");
@@ -54,3 +53,41 @@ function openmenu2() {
         menu.style.display = "none";
     }
 }
+
+var slide = document.querySelectorAll(".slider .slide");
+
+var nextBtn = document.getElementById("next");
+var prevBtn = document.getElementById("prev");
+
+function slidePrev() {
+    const current = document.querySelector(".current");
+    current.classList.remove("current");
+
+    if (current.previousElementSibling) {
+        current.previousElementSibling.classList.add("current");
+    } else {
+        slide[slide.length - 1].classList.add("current");
+    }
+    console.log("fffffff");
+
+}
+
+function slideNext() {
+    const current = document.querySelector(".current");
+    current.classList.remove("current");
+
+    if (current.nextElementSibling) {
+        current.nextElementSibling.classList.add("current");
+    } else {
+        slide[0].classList.add("current");
+    }
+
+}
+
+prevBtn.addEventListener("click", function () {
+    slidePrev();
+})
+
+nextBtn.addEventListener("click", function () {
+    slideNext();
+})
